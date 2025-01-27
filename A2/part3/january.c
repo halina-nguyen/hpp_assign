@@ -1,3 +1,8 @@
+// Source: HPP Lecture - C Programming (Part 2)
+//         https://www.programiz.com/dsa/linked-list-operations
+//         https://www.tutorialspoint.com/delete-a-linked-list-node-at-a-given-position-in-cplusplus
+//         AI (mainly for errors)
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "january.h"

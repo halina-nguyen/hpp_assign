@@ -1,5 +1,5 @@
 // calculate faculty of n
-int faculty(int n);
+unsigned int faculty(unsigned int n);
 
 // print Pascal’s triangle
-void print_triang(int rows);
+void print_triang(unsigned int rows);

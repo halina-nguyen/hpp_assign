@@ -1,3 +1,6 @@
+// Source: HPP Lecture - C Programming (Part 2)
+//         AI (mainly for errors)
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "january.h"

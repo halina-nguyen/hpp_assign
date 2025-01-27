@@ -1,3 +1,5 @@
+// Source: template from part 2 in Assignment 1
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "triang.h"
