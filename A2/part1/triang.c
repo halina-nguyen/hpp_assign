@@ -15,10 +15,3 @@ void print_triang(unsigned int rows) {
         printf("\n");
     }
 }
-
-int main(int argc, char** argv) {
-    unsigned int n = 30;
-    if (argc > 1) n = atoi(argv[1]);
-    print_triang(n);
-    return 0;
-}
