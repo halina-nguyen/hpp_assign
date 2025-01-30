@@ -1,4 +1,4 @@
-// Source: AI
+// Source: AI (for improvements)
 
 #include <stdio.h>
 #include <stdlib.h>
