@@ -16,4 +16,4 @@ void delete_entry(day_t** head, int index);
 void print_database(day_t* head);
 
 // free memory
-void free_list(day_t* head);
+void free_list(day_t** head);

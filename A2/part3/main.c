@@ -58,7 +58,7 @@ int main() {
                 break;
             // Q
             case 'Q':
-                free_list(head);
+                free_list(&head);
                 //printf("Database will be closed\n");
                 return 0;
             // not defined command
@@ -69,6 +69,6 @@ int main() {
     }
 
     // free memory
-    free_list(head);
+    free_list(&head);
     return 0;
 }

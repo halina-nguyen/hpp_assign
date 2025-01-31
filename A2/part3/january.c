@@ -10,6 +10,11 @@
 // add day with its minimum and maximum temperature to database
 void add_entry(day_t** head, int index, float min, float max) {
     day_t* new_day = (day_t*)malloc(sizeof(day_t));
+    if (!new_day) {
+        printf("ERROR: Memory allocation failed\n");
+        return;
+    }
+
     new_day->index = index;
     new_day->min = min;
     new_day->max = max;
@@ -49,21 +54,23 @@ void delete_entry(day_t** head, int index) {
     day_t* current = *head;
     day_t* previous = NULL;
 
-    if ((*head)->index == index) {
-        *head = (*head)->next;
-    } else {
-        while (current != NULL && current->index != index) {
-            previous = current;
-            current = current->next;
-        }
-
-        if (current == NULL) {
-            //printf("ERROR: Entry %d not found\n", index);
-            return;
-        }
-
-        previous->next = current->next;
+    if (current->index == index) {
+        *head = current->next;
+        free(current);
+        return;
     }
+
+    while (current != NULL && current->index != index) {
+        previous = current;
+        current = current->next;
+    }
+
+    if (current == NULL) {
+        //printf("ERROR: Entry %d not found\n", index);
+        return;
+    }
+
+    previous->next = current->next;
     free(current);
     //printf("Entry %d deleted\n", index);
 }
@@ -79,11 +86,12 @@ void print_database(day_t* head) {
 }
 
 // free memory
-void free_list(day_t* head) {
-    while (head != NULL) {
-        day_t* next = head->next;
-        free(head);
-        head = next;
+void free_list(day_t** head) {
+    day_t* current = *head;
+    while (current != NULL) {
+        day_t* next = current->next;
+        free(current);
+        current = next;
     }
-    head = NULL;
+    *head = NULL;
 }
