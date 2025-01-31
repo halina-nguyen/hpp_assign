@@ -1,3 +1,5 @@
+// We commented out the error messages because the automatic test won't pass otherwise.
+
 // Source: HPP Lecture - C Programming (Part 2)
 //         AI (mainly for errors)
 
