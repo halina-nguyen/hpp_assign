@@ -63,7 +63,7 @@ int main() {
                 return 0;
             // not defined command
             default:
-                //printf("Invalid command\n");
+                printf("Invalid command\n");
                 while (getchar() != '\n');
         }
     }
